@@ -236,9 +236,6 @@ function renderMenuList() {
       </div>`;
   }).join('');
 
-  el.querySelectorAll('[data-edit]').forEach(btn => openEditForm(+btn.dataset.edit));
-  el.querySelectorAll('[data-del]').forEach(btn => deleteDish(+btn.dataset.del));
-
   // attach listeners properly
   el.querySelectorAll('[data-edit]').forEach(btn => {
     btn.addEventListener('click', () => openEditForm(+btn.dataset.edit));
